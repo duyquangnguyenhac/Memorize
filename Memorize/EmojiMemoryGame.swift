@@ -34,6 +34,10 @@ class EmojiMemoryGame: ObservableObject {
         }
     }
     
+    func getScore() -> Int{
+        return model.score
+    }
+    
     func newGame() {
         model = EmojiMemoryGame.createMemoryGame(self.theme.emojiSet, self.theme.numberOfPairs)
     }

@@ -33,7 +33,6 @@ struct ContentView: View {
                 }.overlay(
                     RoundedRectangle(cornerRadius: 10.0).stroke(lineWidth: 2.0).foregroundColor(.mint)
                 )
-                Spacer()
                 Button(action: {
                     viewModel.newGame()
                 }){
@@ -41,6 +40,8 @@ struct ContentView: View {
                 }.overlay(
                     RoundedRectangle(cornerRadius: 10.0).stroke(lineWidth: 2.0).foregroundColor(.mint)
                 )
+                Spacer()
+                Text("\(viewModel.getScore())").font(.largeTitle)
             }.padding(.horizontal)
         }.padding(.horizontal)
     }
